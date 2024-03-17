@@ -1,0 +1,10 @@
+{
+    "version": 2,
+    "builds": [
+      { "src": "Telegram-TiktokBot.py", "use": "@vercel/python" }
+    ],
+    "routes": [
+      { "handle": "api", "src": "/(.*)", "dest": "Telegram-TiktokBot.py" }
+    ]
+  }
+  
