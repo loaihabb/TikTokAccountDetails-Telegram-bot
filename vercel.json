@@ -3,8 +3,11 @@
     "builds": [
       { "src": "Telegram-TiktokBot.py", "use": "@vercel/python" }
     ],
-    "routes": [
-      { "handle": "api", "src": "/(.*)", "dest": "Telegram-TiktokBot.py" }
-    ]
+        "routes": [
+          {
+            "src": "*",
+            "dest": "Telegram-TiktokBot.py"
+          }
+        ]
   }
   
