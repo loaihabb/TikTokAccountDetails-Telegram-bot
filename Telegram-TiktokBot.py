@@ -2,7 +2,8 @@ import re
 import json
 import requests
 import pycountry
-from decouple import config
+import os
+from dotenv import load_dotenv
 from telegram import Update
 from telegram.ext import Updater, MessageHandler, Filters, CallbackContext
 
@@ -119,8 +120,9 @@ def get_tiktok_details(update: Update, context: CallbackContext) -> None:
 
 
 def main():
+    load_dotenv()
     # Replace 'YOUR_BOT_TOKEN' with your actual bot token
-    BOT_TOKEN = config('BOT_TOKEN')
+    BOT_TOKEN = os.getenv("BOT_TOKEN")
     updater = Updater(token=BOT_TOKEN, use_context=True)
 
     dp = updater.dispatcher
