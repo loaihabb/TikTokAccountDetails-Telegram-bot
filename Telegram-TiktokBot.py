@@ -113,7 +113,6 @@ class Users:
         else:
             return '🌐'  # Default: dünya bayrağı
 
-
 def handler():
     load_dotenv()
     # Replace 'YOUR_BOT_TOKEN' with your actual bot token
