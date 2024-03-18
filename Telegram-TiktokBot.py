@@ -1,5 +1,3 @@
-# Telegram-TiktokBot.py
-
 import re
 import json
 import requests
@@ -113,7 +111,15 @@ class Users:
         else:
             return '🌐'  # Default: dünya bayrağı
 
-def handler():
+
+def get_tiktok_details(update: Update, context: CallbackContext) -> None:
+    username = update.message.text
+    user_instance = Users()
+    result = user_instance.details(username)
+    update.message.reply_text(result, parse_mode='HTML')
+
+
+def main():
     load_dotenv()
     # Replace 'YOUR_BOT_TOKEN' with your actual bot token
     BOT_TOKEN = os.getenv("BOT_TOKEN")
@@ -127,11 +133,6 @@ def handler():
 
     updater.idle()
 
-def get_tiktok_details(update: Update, context: CallbackContext) -> None:
-    username = update.message.text
-    user_instance = Users()
-    result = user_instance.details(username)
-    update.message.reply_text(result, parse_mode='HTML')
 
 if __name__ == '__main__':
-    handler()
+    main()
