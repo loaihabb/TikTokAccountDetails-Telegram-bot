@@ -2,7 +2,7 @@
   "functions": {
     "get_tiktok_details": {
       "runtime": "python3.8",
-      "includeFiles": ["Telegram-TiktokBot.py", "requirements.txt"]
+      "includeFiles": "Telegram-TiktokBot.py"
     }
   }
 }
