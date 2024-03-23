@@ -1,11 +1,8 @@
 {
   "functions": {
-    "api/get_tiktok_details": {
-      "handler": "Telegram-TiktokBot.main",
-      "runtime": "python3.8"
+    "get_tiktok_details": {
+      "runtime": "python3.8",
+      "includeFiles": ["Telegram-TiktokBot.py", "requirements.txt"]
     }
-  },
-  "routes": [
-    { "src": "/api/get_tiktok_details", "dest": "/api/get_tiktok_details" }
-  ]
+  }
 }
