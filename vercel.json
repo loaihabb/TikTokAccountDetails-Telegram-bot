@@ -1,12 +1,11 @@
 {
-    "version": 2,
-    "builds": [
-      { "src": "./Telegram-TiktokBot.py", "use": "@vercel/python" }
-    ],
-        "routes": [
-          {
-            "src": ".(.*)*",
-            "dest": "/"
-          }
-        ]
-  }
+  "functions": {
+    "api/get_tiktok_details": {
+      "handler": "Telegram-TiktokBot.main",
+      "runtime": "python3.8"
+    }
+  },
+  "routes": [
+    { "src": "/api/get_tiktok_details", "dest": "/api/get_tiktok_details" }
+  ]
+}
