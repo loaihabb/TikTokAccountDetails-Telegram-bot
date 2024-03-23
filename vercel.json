@@ -1,12 +1,8 @@
 {
   "functions": {
-    "TikTokAccountDetails-Telegram-bot": {
+    "*": {
       "runtime": "python3.8",
-      "includeFiles": "Telegram-TiktokBot.py",
-      "api": {
-        "src": "Telegram-TiktokBot.py",
-        "handler": "main"
-      }
+      "includeFiles": "Telegram-TiktokBot.py"
     }
   }
 }
