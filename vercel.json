@@ -1,6 +1,6 @@
 {
   "functions": {
-    "api/**/*.py": {
+    "TikTokAccountDetails-Telegram-bot/Telegram-TiktokBot.py": {
       "runtime": "python3.8",
       "maxDuration": 10
     }
