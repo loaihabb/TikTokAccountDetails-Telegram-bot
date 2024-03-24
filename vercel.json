@@ -1,20 +1,8 @@
-
 {
-
-  "version": 2,
-
-  "builds": [{ "src": "Telegram-TiktokBot.py", "use": "@vercel/python" }],
-
-  "routes": [{ "src": "/(.*)", "dest": "Telegram-TiktokBot.py" }],
-
   "functions": {
-
-    "main": {
-
-      "maxDuration": 500
-
+    "api/**/*.py": {
+      "runtime": "python3.8",
+      "maxDuration": 10
     }
-
   }
-
 }
