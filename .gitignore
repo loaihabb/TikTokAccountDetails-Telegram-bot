@@ -5,5 +5,6 @@
 /TiktokDownloader.py
 /UsernameTiktok.py
 /__pycache__
-/vercel.json
-/desktop.ini
+vercel.json
+desktop.ini
+.vscode
