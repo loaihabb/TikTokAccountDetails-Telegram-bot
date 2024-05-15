@@ -112,10 +112,12 @@ class Users:
             return '🌐'  # Default: dünya bayrağı
 
 
-def get_tiktok_details(username):
+def get_tiktok_details(update: Update, context: CallbackContext) -> None:
+    username = update.message.text
     user_instance = Users()
     result = user_instance.details(username)
-    return result
+    update.message.reply_text(result, parse_mode='HTML')
+
 
 def main():
     load_dotenv()
