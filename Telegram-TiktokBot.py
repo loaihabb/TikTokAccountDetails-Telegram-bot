@@ -124,13 +124,9 @@ def main():
     # Replace 'YOUR_BOT_TOKEN' with your actual bot token
     BOT_TOKEN = os.getenv("BOT_TOKEN")
     updater = Updater(token=BOT_TOKEN, use_context=True)
-
     dp = updater.dispatcher
-
     dp.add_handler(MessageHandler(Filters.text & ~Filters.command, get_tiktok_details))
-
     updater.start_polling()
-
     updater.idle()
 
 
