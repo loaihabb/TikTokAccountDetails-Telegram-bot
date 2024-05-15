@@ -2,12 +2,12 @@
   "version": 2,
   "builds": [
     {
-      "src": "Telegram-TiktokBot.py",
-      "use": "@now/python3.9",
-      "config": { "python": "3.9" }
+      "src": "*.py",
+      "use": "@vercel/python",
+      "config":  { "runtime": "python3.9"}
     }
   ],
   "routes": [
-    { "src": "/.*", "dest": "Telegram-TiktokBot.py" }
+    { "src": "/(.*)", "dest": "Telegram-TiktokBot.py" }
   ]  
 }
