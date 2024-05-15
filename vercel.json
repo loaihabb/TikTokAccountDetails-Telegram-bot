@@ -3,10 +3,12 @@
   "builds": [
     {
       "src": "Telegram-TiktokBot.py",
-      "use": "@now/python"
+      "use": "@now/python",
+      "config": { "python": "3.9" }
     }
   ],
   "routes": [
+    { "handle": "filesystem" },
     { "src": "/.*", "dest": "Telegram-TiktokBot.py" }
-  ]
+  ]  
 }
