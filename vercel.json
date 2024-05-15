@@ -1,8 +1,11 @@
 {
   "functions": {
-    "TikTokAccountDetails-Telegram-bot/Telegram-TiktokBot.py": {
+    "*": {
       "runtime": "python3.8",
-      "maxDuration": 10
+      "includeFiles": "Telegram-TiktokBot.py"
     }
+  },
+  "env": {
+    "BOT_TOKEN": "5097970329:AAENn446NvdY9dhbY8xtyeXzNn7gP5nitJM"
   }
 }
